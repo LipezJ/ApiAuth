@@ -3,6 +3,6 @@ import { authUser } from '../controllers/task';
 
 const router = Router();
 
-router.get('/users/:user/:pass', authUser)
+router.get('/users/:user/:pass/auth', authUser)
 
 export default router
