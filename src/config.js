@@ -1,6 +1,6 @@
 export const config = {
-    host: 'localhost',
-    user: 'root',
-    password: 'Lipez2004',
-    database: 'usersdb'
+    host: 'bf2x963nuvt1wthkgfps-mysql.services.clever-cloud.com',
+    user: 'uaqnoub8nduary81',
+    password: 'mCKfWid32szetSCHn0uU',
+    database: 'bf2x963nuvt1wthkgfps'
 }

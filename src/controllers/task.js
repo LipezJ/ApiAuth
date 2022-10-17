@@ -1,12 +1,16 @@
 import { connect } from "../database"
 
 export const authUser = async (req, res) => {
+    res.header("Access-Control-Allow-Origin", "*");
     const db = await connect()
     const [rows] = await db.query('select * from users where correo = "' + req.params.user + '"')
-    if (req.params.pass == rows[0].password && req.params.user == rows[0].correo){
+    if (rows.length > 0 && req.params.pass == rows[0].password && req.params.user == rows[0].correo){
         console.log('autenticado')
-        res.send(rows[0])
+        rows.push(true)
+        res.send(rows)
     }else{
-        res.send([])
+        rows.push(false)
+        res.send(rows)
+        console.log('nope') 
     }
 }

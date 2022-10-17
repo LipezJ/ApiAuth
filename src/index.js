@@ -1,4 +1,4 @@
 import app from "./app";
 
-app.listen(3000)
-console.log('server on port 3000!')
+app.listen(process.env.PORT || 3001)
+console.log('server on port ' + process.env.PORT || 3001)

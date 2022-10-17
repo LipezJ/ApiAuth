@@ -2,3 +2,4 @@ node_modules/
 dist/
 src/routes/database.js
 task.http
+.env
