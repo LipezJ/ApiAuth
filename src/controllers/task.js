@@ -1,7 +1,7 @@
 import { connect } from "../database";
-const db = await connect();
 
 export const authUser = async (req, res) => {
+  const db = await connect();
   if (req.params.user.length) {
     const [rows] = await db.query(
       'select * from users where correo = "' + req.params.user + '"'
