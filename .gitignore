@@ -1,4 +1,0 @@
-node_modules/
-src/routes/database.js
-task.http
-.env
